@@ -1,0 +1,3 @@
+[submodule "HeatSignatureFPSChanger/externals/IniReader"]
+	path = HeatSignatureFPSChanger/externals/IniReader
+	url = https://github.com/ThirteenAG/IniReader.git
