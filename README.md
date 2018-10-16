@@ -13,4 +13,4 @@ You tell me.
 
 # Credits
 * [fredaikis from Unknown Cheats for the memory patching code.](https://www.unknowncheats.me/wiki/C%2B%2B:Make_Your_Own_DLL_Hack_-_Memory_Patching_And_Editing)  
-* [@ThirteenAG for IniReader]
+* [@ThirteenAG for IniReader](https://github.com/ThirteenAG/IniReader)
