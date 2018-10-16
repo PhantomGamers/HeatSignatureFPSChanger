@@ -1,3 +1,6 @@
 [submodule "HeatSignatureFPSChanger/externals/IniReader"]
 	path = HeatSignatureFPSChanger/externals/IniReader
 	url = https://github.com/ThirteenAG/IniReader.git
+[submodule "HeatSignatureFPSChanger/externals/asiloader"]
+	path = HeatSignatureFPSChanger/externals/asiloader
+	url = https://github.com/ThirteenAG/Ultimate-ASI-Loader.git
