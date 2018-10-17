@@ -3,6 +3,14 @@
 #include <Windows.h>
 #include <tlhelp32.h>
 #include <Psapi.h>
+#include <sstream>
+
+#define DBOUT( s )            \
+{                             \
+   std::ostringstream os_;    \
+   os_ << s;                   \
+   OutputDebugString( os_.str().c_str() );  \
+}
 
 void WriteToMemory(uintptr_t addressToWrite, char* valueToWrite, int byteNum)
 {
@@ -45,4 +53,16 @@ DWORD FindPattern(char *module, char *pattern, char *mask)
 	}
 
 	return NULL;
+}
+
+DWORD* FindPointer(char *module, DWORD in, int byteoffset = 0)
+{
+	char* bytetest[4] = { 0 };
+	in = in + (DWORD)byteoffset;
+	memcpy(bytetest, (DWORD*)in, sizeof(bytetest));
+	DWORD* out = (DWORD*)((*(DWORD*)(bytetest)));
+	DBOUT("[FPSChanger] FPS Pointer Address DWORD*: ");
+	DBOUT(out);
+	DBOUT("\n");
+	return out;
 }
