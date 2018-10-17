@@ -55,12 +55,12 @@ DWORD FindPattern(char *module, char *pattern, char *mask)
 	return NULL;
 }
 
-DWORD* FindPointer(char *module, DWORD in, int byteoffset = 0)
+DWORD FindPointer(char *module, DWORD in, int byteoffset = 0)
 {
 	char* bytetest[4] = { 0 };
 	in = in + (DWORD)byteoffset;
 	memcpy(bytetest, (DWORD*)in, sizeof(bytetest));
-	DWORD* out = (DWORD*)((*(DWORD*)(bytetest)));
+	DWORD out = (DWORD)*bytetest;
 	DBOUT("[FPSChanger] FPS Pointer Address DWORD*: ");
 	DBOUT(out);
 	DBOUT("\n");
